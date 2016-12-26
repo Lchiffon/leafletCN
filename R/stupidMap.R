@@ -7,7 +7,9 @@ stupidMap = function(dat,
                      stroke = T,
                      smoothFactor = 1,
                      weight = 1,
-                     fillOpacity = 0.7,...){
+                     fillOpacity = 0.7,
+                     legendTitle = "Legend",
+                     ...){
 
   if(is.null(namevar)){
     name = dat[, 1]
@@ -51,6 +53,11 @@ stupidMap = function(dat,
                 weight = weight,
                 color = ~pal(value),
                 popup = ~htmltools::htmlEscape(popup),...
+    ) %>%
+    leaflet::addLegend("bottomright", pal = pal, values = ~gdp_md_est,
+              title = legendTitle,
+              labFormat = labelFormat(prefix = ""),
+              opacity = 1
     )
 
 
