@@ -64,6 +64,6 @@ stupidMap = function(dat,
 }
 #
 #
-# dat = data.frame(cityNames("china"),
+# dat = data.frame(regionNames("china"),
 #                 runif(384))
 # stupidMap(dat,"city")
