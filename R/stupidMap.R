@@ -56,7 +56,7 @@ stupidMap = function(dat,
     ) %>%
     leaflet::addLegend("bottomright", pal = pal, values = ~value,
               title = legendTitle,
-              labFormat = labelFormat(prefix = ""),
+              labFormat = leaflet::labelFormat(prefix = ""),
               opacity = 1
     )
 
