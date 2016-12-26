@@ -54,7 +54,7 @@ stupidMap = function(dat,
                 color = ~pal(value),
                 popup = ~htmltools::htmlEscape(popup),...
     ) %>%
-    leaflet::addLegend("bottomright", pal = pal, values = ~gdp_md_est,
+    leaflet::addLegend("bottomright", pal = pal, values = ~value,
               title = legendTitle,
               labFormat = labelFormat(prefix = ""),
               opacity = 1
