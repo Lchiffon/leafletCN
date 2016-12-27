@@ -1,8 +1,11 @@
+# palette or color space RColorBrewer::display.brewer.all()
+
 stupidMap = function(dat,
                      mapName,
                      namevar=NULL,
                      valuevar=NULL,
                      palette = "Blues",
+                     colorMethod = "numeric",
                      popup = NULL,
                      stroke = T,
                      smoothFactor = 1,
@@ -10,7 +13,9 @@ stupidMap = function(dat,
                      fillOpacity = 0.7,
                      legendTitle = "Legend",
                      ...){
-
+  if(class(dat) != 'data.frame'){
+    stop("dat should be a data.frame")
+  }
   if(is.null(namevar)){
     name = dat[, 1]
   }else{
@@ -26,7 +31,7 @@ stupidMap = function(dat,
 
 
   countries <- readGeoLocal(mapName)
-  index = sapply(name,function(x) which(x==countries$name))
+  index = sapply(name,function(x) which(x==countries$name)[1])
 
   if(is.null(popup)){
     countries$popup = countries$name
@@ -39,11 +44,16 @@ stupidMap = function(dat,
 
   countries$value = value[index]
 
+  ##
+  # if(is.numeric(value)){
+    pal <- leaflet::colorNumeric(
+      palette = palette,
+      domain = countries$value
+    )
+  # }else{
+  #
+  # }
 
-  pal <- leaflet::colorNumeric(
-    palette = palette,
-    domain = countries$value
-  )
 
   map <- leaflet::leaflet(countries)
   map %>% leaflet::addTiles() %>%
@@ -52,7 +62,7 @@ stupidMap = function(dat,
                 fillOpacity = fillOpacity,
                 weight = weight,
                 color = ~pal(value),
-                popup = ~htmltools::htmlEscape(popup),...
+                popup = ~htmltools::htmlEscape(popup)
     ) %>%
     leaflet::addLegend("bottomright", pal = pal, values = ~value,
               title = legendTitle,
@@ -64,6 +74,6 @@ stupidMap = function(dat,
 }
 #
 #
-# dat = data.frame(regionNames("china"),
+# dat = data.frame(regionNames("city"),
 #                 runif(384))
 # stupidMap(dat,"city")

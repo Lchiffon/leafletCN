@@ -1,5 +1,4 @@
 demomap = function(city){
-  # city = '上海'
   # if(.Platform$OS.type == "windows"){
   #   locate = Sys.getlocale("LC_CTYPE")
   #   Sys.setlocale("LC_CTYPE","eng")

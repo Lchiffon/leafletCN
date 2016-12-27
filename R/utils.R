@@ -6,7 +6,14 @@ encodingSolution = function(str){
 ## read function
 readGeoLocal = function(city){
   query = toLabel(city)
-
+  if(!any(mapNames$label==query)){
+    stop(paste0("\n",
+                city,
+                ": this mapType cannot found!\n",
+                "Please check the mapType name or use icnov to convert encoding.\n",
+                "Valid mapTypes: regionNames()\n",
+                "Encoding convert: ?iconv"))
+  }
   file = paste0("geojson/",
                 mapNames$files[mapNames$label==query]
   )
