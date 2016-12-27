@@ -12,7 +12,8 @@ readGeoLocal = function(city){
   )
   filePath = system.file(file,package = "leafletCN")
 
-  output = rgdal::readOGR(filePath, "OGRGeoJSON")
+  # output = rgdal::readOGR(filePath, "OGRGeoJSON")
+  output = geoShapeRead(filePath)
   if(.Platform$OS.type == "windows"){
     output$name = encodingSolution(output$name)
   }
