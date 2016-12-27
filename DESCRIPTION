@@ -10,5 +10,6 @@ License: MIT
 LazyData: TRUE
 Imports:
   magrittr,
-  rgdal,
+  sp,
+  jsonlite,
   leaflet
