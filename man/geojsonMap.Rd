@@ -5,7 +5,7 @@
 \title{Load amap to leaflet}
 \usage{
 geojsonMap(dat, mapName, namevar=NULL, valuevar=NULL,
-  palette = "Blues", colorMethod = c("numeric", "bin", "quantile", "factor")
+  palette = "Blues", colorMethod = "numeric",
   na.color = "#808080", popup = NULL, stroke = T, smoothFactor = 1,
    weight = 1, fillOpacity = 0.7, legendTitle = "Legend", ...)
 }
@@ -37,8 +37,6 @@ geojsonMap(dat, mapName, namevar=NULL, valuevar=NULL,
 \item{legendTitle}{legend title}
 
 \item{...}{other paramter pass to the color mapping function}
-
-\item{map}{a leaflet object}
 }
 \description{
 Simple function like addTiles()

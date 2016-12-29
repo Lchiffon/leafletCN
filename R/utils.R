@@ -2,7 +2,7 @@
 #   library(leaflet)
 #   library(sp)
 # }
-
+globalVariables(c("mapNames", ".triList"))
 
 ## Encoding solution
 encodingSolution = function(str){

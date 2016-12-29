@@ -2,7 +2,7 @@
 % Please edit documentation in R/leafletGeo.R
 \name{leafletGeo}
 \alias{leafletGeo}
-\title{Create a leaflet object from a data.frame}
+\title{Create a sp object from a data.frame}
 \usage{
 leafletGeo(mapName, dat = NULL, namevar = NULL, valuevar = NULL)
 }
@@ -16,24 +16,31 @@ leafletGeo(mapName, dat = NULL, namevar = NULL, valuevar = NULL)
 \item{valuevar}{show which featue is chosen for value variable}
 }
 \description{
-Function for creating a leaflet object from a data.frame and
+Function for creating a sp object from a data.frame and
 mapType
 }
 \examples{
-dat = data.frame(regionNames("city"),
-                              runif(384))
-map = leafletGeo("china", dat)
-map \%>\% addTiles() \%>\%
-   leaflet::addPolygons(stroke = stroke,
-   smoothFactor = smoothFactor,
-   fillOpacity = fillOpacity,
-   weight = weight,
-   color = ~pal(value),
-   popup = ~htmltools::htmlEscape(popup)
-   ) \%>\%
-     leaflet::addLegend("bottomright", pal = pal, values = ~value,
-                          title = legendTitle,
+if(require(leaflet)){
+  dat = data.frame(regionNames("city"),
+                                runif(384))
+  map = leafletGeo("city", dat)
+
+   pal <- colorNumeric(
+     palette = "Blues",
+     domain = map$value)
+
+  leaflet(map) \%>\% addTiles() \%>\%
+     leaflet::addPolygons(stroke = TRUE,
+     smoothFactor = 1,
+     fillOpacity = 0.7,
+     weight = 1,
+     color = ~pal(value),
+     popup = ~htmltools::htmlEscape(popup)
+     ) \%>\%
+   leaflet::addLegend("bottomright", pal = pal, values = ~value,
+                        title = "legendTitle",
                  labFormat = leaflet::labelFormat(prefix = ""),
                  opacity = 1)
+}
 }
 

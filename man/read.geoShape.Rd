@@ -13,9 +13,10 @@ read.geoShape(txt)
 Function for reading geojson shape file into R, come out to be a SpatialPolygonsDataFrame object
 }
 \examples{
-require(sp)
-filePath = system.file("geojson/china.json",package = "leafletCN")
-map = read.geoShape("inst/geojson/11.json")
-plot(map)
+if(require(sp)){
+  filePath = system.file("geojson/china.json",package = "leafletCN")
+  map = read.geoShape(filePath)
+  plot(map)
+}
 }
 

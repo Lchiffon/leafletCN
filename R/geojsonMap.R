@@ -4,13 +4,12 @@
 ##'
 ##' @usage
 ##' geojsonMap(dat, mapName, namevar=NULL, valuevar=NULL,
-##'   palette = "Blues", colorMethod = c("numeric", "bin", "quantile", "factor")
+##'   palette = "Blues", colorMethod = "numeric",
 ##'   na.color = "#808080", popup = NULL, stroke = T, smoothFactor = 1,
 ##'    weight = 1, fillOpacity = 0.7, legendTitle = "Legend", ...)
 ##'
 ##' @param dat a data.frame contain regions and values
 ##' @param mapName mapName for loading, eg. 'china', 'city', ...
-##' @param map   a leaflet object
 ##' @param namevar show which feature is chosen for name variable
 ##' @param valuevar show which featue is chosen for value variable
 ##' @param palette The colors or color function that values will be mapped to, see RColorBrewer::display.brewer.all()

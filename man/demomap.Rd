@@ -13,6 +13,6 @@ demomap (mapName)
 This function create a leaflet map from a name of the mapType like china, city
 }
 \examples{
-demoMap("city")
+demomap("city")
 }
 

@@ -17,6 +17,9 @@ amap(map,attribution = '&copy; <a href="http://amap.com">amp.com</a >',...)
 Simple function like addTiles()
 }
 \examples{
-leaflet() \%>\% amap()
+if(require(leaflet)){
+  leaflet() \%>\% amap()
+}
+
 }
 

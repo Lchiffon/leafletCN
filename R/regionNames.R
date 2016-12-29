@@ -6,11 +6,9 @@
 ##' regionNames(mapName)
 ##'
 ##' @param mapName for loading, eg. 'china', 'city', ...
-##' @param attribution attribution of the map
-##' @param ... other paramter pass to the addTiles function
 ##'
 ##' @examples
-##' leaflet() %>% amap()
+##' regionNames('city')
 ##' @export
 
 regionNames = function(mapName=NULL){

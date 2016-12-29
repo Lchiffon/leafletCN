@@ -9,7 +9,7 @@
 ##'
 ##'
 ##' @examples
-##' demoMap("city")
+##' demomap("city")
 ##' @export
 demomap = function(mapName){
   # if(.Platform$OS.type == "windows"){

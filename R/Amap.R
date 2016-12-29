@@ -10,8 +10,9 @@
 ##' @param ... other paramter pass to the addTiles function
 ##'
 ##' @examples
-##' library(leaflet)
-##' leaflet() %>% amap()
+##' if(require(leaflet)){
+##'   leaflet() %>% amap()
+##' }
 ##'
 ##' @export
 amap = function(map,

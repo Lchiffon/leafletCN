@@ -8,15 +8,11 @@ regionNames(mapName)
 }
 \arguments{
 \item{mapName}{for loading, eg. 'china', 'city', ...}
-
-\item{attribution}{attribution of the map}
-
-\item{...}{other paramter pass to the addTiles function}
 }
 \description{
 show regions in the map
 }
 \examples{
-leaflet() \%>\% amap()
+regionNames('city')
 }
 

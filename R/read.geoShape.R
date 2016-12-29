@@ -8,10 +8,11 @@
 ##' @param txt   a JSON string, URL or file
 ##'
 ##' @examples
-##' require(sp)
-##' filePath = system.file("geojson/china.json",package = "leafletCN")
-##' map = read.geoShape("inst/geojson/11.json")
-##' plot(map)
+##' if(require(sp)){
+##'   filePath = system.file("geojson/china.json",package = "leafletCN")
+##'   map = read.geoShape(filePath)
+##'   plot(map)
+##' }
 ##' @export
 read.geoShape = function(txt){
 
