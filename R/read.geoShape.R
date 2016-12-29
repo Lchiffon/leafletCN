@@ -23,7 +23,7 @@
 # plot(ex_1.7)
 
 ## txt a geoJSON string, URL or file
-geoShapeRead = function(txt){
+read.geoShape = function(txt){
 
   raw = jsonlite::fromJSON(txt)
   # Polygons part
@@ -38,7 +38,7 @@ geoShapeRead = function(txt){
       #   Sr = sp::Polygon(x)
       # }
       Sr = sp::Polygon(a)
-      Sp = sp::Polygons(list(Sr), namei)
+      Sp = sp::Polygons(list(Sr), "namei")
       return(Sp)
     }else{
       if(any(sapply(x, class) == 'list')){
@@ -63,7 +63,7 @@ geoShapeRead = function(txt){
         #   return(sp::Polygon(y))
         # }
       })
-      Sp = sp::Polygons(Sr, namei)
+      Sp = sp::Polygons(Sr, "namei")
       return(Sp)
     }
   })
