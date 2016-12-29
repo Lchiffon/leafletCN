@@ -1,3 +1,9 @@
+# .onAttach <- function(libname, pkgname ){
+#   library(leaflet)
+#   library(sp)
+# }
+
+
 ## Encoding solution
 encodingSolution = function(str){
   iconv(str, "UTF-8", "UTF-8")
@@ -28,16 +34,16 @@ readGeoLocal = function(city){
   return(output)
 }
 
-
+## .triList
 ## Use first two words to match
 toLabel = function(city){
   labels = sapply(city, function(x){
     if(tolower(substr(x,1,1)) %in% letters){
       return(tolower(x))
-    } else if(grepl("嘉义",x)|
-       grepl("新竹",x)|
-       grepl("阿拉",x)|
-       grepl("张家",x)
+    } else if(grepl(.triList[[1]], x)|
+       grepl(.triList[[2]], x)|
+       grepl(.triList[[3]], x)|
+       grepl(.triList[[4]], x)
     ){
       return(substr(x, 1, 3))
     }else{

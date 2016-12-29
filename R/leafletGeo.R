@@ -1,4 +1,15 @@
+##' @title Create a leaflet object from a data.frame
 ##'
+##' @description Function for creating a leaflet object from a data.frame and
+##' mapType
+##'
+##' @usage
+##' leafletGeo(mapName, dat = NULL, namevar = NULL, valuevar = NULL)
+##'
+##' @param mapName mapName for loading, eg. 'china', 'city', ...
+##' @param dat a data.frame contain regions and values
+##' @param namevar show which feature is chosen for name variable
+##' @param valuevar show which featue is chosen for value variable
 ##'
 ##'
 ##' @examples
@@ -17,7 +28,7 @@
 ##'                           title = legendTitle,
 ##'                  labFormat = leaflet::labelFormat(prefix = ""),
 ##'                  opacity = 1)
-
+##' @export
 leafletGeo = function(mapName,
                       dat = NULL,
                       namevar = NULL,

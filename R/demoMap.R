@@ -1,10 +1,23 @@
-demomap = function(city){
+##' @title Show the basic shape of the data
+##'
+##' @description This function create a leaflet map from a name of the mapType like china, city
+##'
+##' @usage
+##' demomap (mapName)
+##'
+##' @param mapName mapName for loading, eg. 'china', 'city', ...
+##'
+##'
+##' @examples
+##' demoMap("city")
+##' @export
+demomap = function(mapName){
   # if(.Platform$OS.type == "windows"){
   #   locate = Sys.getlocale("LC_CTYPE")
   #   Sys.setlocale("LC_CTYPE","eng")
   # }
 
-  countries <- readGeoLocal(city)
+  countries <- readGeoLocal(mapName)
   countries$popup = countries$name
   # countries$color = rainbow(length(countries$name))
   ## Encoding

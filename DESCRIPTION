@@ -9,7 +9,9 @@ Description: An R gallery for China and other geojson choropleth map in leaflet
 License: MIT
 LazyData: TRUE
 Imports:
-  magrittr,
-  sp,
-  jsonlite,
-  leaflet
+    htmltools,
+    magrittr,
+    sp,
+    jsonlite,
+    leaflet
+RoxygenNote: 5.0.1
