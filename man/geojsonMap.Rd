@@ -7,7 +7,7 @@
 geojsonMap(dat, mapName, namevar=NULL, valuevar=NULL,
   palette = "Blues", colorMethod = "numeric",
   na.color = "#808080", popup = NULL, stroke = T, smoothFactor = 1,
-   weight = 1, fillOpacity = 0.7, legendTitle = "Legend", ...)
+   weight = 1, fillOpacity = 0.7, legendTitle = "Legend", tileType, ...)
 }
 \arguments{
 \item{dat}{a data.frame contain regions and values}
@@ -35,6 +35,8 @@ geojsonMap(dat, mapName, namevar=NULL, valuevar=NULL,
 \item{fillOpacity}{fill opacity}
 
 \item{legendTitle}{legend title}
+
+\item{tileType}{function to define tile like amap or leaflet::addTiles}
 
 \item{...}{other paramter pass to the color mapping function}
 }
