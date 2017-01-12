@@ -50,7 +50,7 @@ regionNames("成都")
 demomap("台湾")
 ```
 
-<iframe src="examples/demo1.html">
+<iframe src="examples/demo1.html"></iframe>
 
 #### *geojsonmap*
 将一个数据框显示在需要展示的地图上.
@@ -65,7 +65,7 @@ dat = data.frame(name = regionNames("china"),
 geojsonMap(dat,"china")
 ```
 
-<iframe src="examples/demo2.html">
+<iframe src="examples/demo2.html"></iframe>
 
 ##### *geojsonmap* 的参数
 
