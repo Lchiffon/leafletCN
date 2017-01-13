@@ -49,7 +49,7 @@ regionNames("成都")
 ```
 demomap("台湾")
 ```
-
+![](examples/demo1.png)
 <iframe src="examples/demo1.html"></iframe>
 
 #### *geojsonmap*
@@ -64,7 +64,7 @@ dat = data.frame(name = regionNames("china"),
                  value = runif(34))
 geojsonMap(dat,"china")
 ```
-
+![](examples/demo2.png)
 <iframe src="examples/demo2.html"></iframe>
 
 ##### *geojsonmap* 的参数
@@ -80,6 +80,7 @@ leaflet() %>%
   amap() %>%  # Add default OpenStreetMap map tiles
   addMarkers(lng=116.3125774825, lat=39.9707249401, popup="The birthplace of COS")
 ```
+![](examples/demo3.png)
 
 #### *read.geoShape*
 `read.geoShape`这个函数可以把一个geojson格式的数据读取为一个`SpatialPolygonsDataFrame`对象, 方便sp或者leaflet包中的调用.
@@ -91,7 +92,7 @@ if(require(sp)){
   plot(map)
 }
 ```
-
+![](examples/demo4.png)
 
 #### *leafletGeo*
 `leafletGeo`这个函数可以把一个数据框和一个地图组合在一起, 方便用leaflet调用, 其中名字的
@@ -122,6 +123,7 @@ if(require(leaflet)){
 }
 
 ```
+![](examples/demo5.png)
 
 #### 例子
 
