@@ -69,7 +69,7 @@ geojsonMap(dat,"china")
 
 ##### *geojsonmap* 的参数
 
-- 还没开始写噗哈哈
+- 还没开始写噗哈哈, 只写了帮助文档, 求PR
 
 ### 辅助函数
 
@@ -77,7 +77,7 @@ geojsonMap(dat,"china")
 叠加一个高德地图, 使用:
 ```
 leaflet() %>%
-  amap() %>%  # Add default OpenStreetMap map tiles
+  amap() %>%  
   addMarkers(lng=116.3125774825, lat=39.9707249401, popup="The birthplace of COS")
 ```
 ![](examples/demo3.png)
