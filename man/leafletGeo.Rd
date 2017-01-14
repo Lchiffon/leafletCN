@@ -21,9 +21,9 @@ mapType
 }
 \examples{
 if(require(leaflet)){
-  dat = data.frame(regionNames("city"),
-                                runif(384))
-  map = leafletGeo("city", dat)
+  dat = data.frame(regionNames("china"),
+                                runif(34))
+  map = leafletGeo("china", dat)
 
    pal <- colorNumeric(
      palette = "Blues",

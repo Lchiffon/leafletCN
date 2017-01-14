@@ -44,18 +44,18 @@ geojsonMap(dat, mapName, namevar=NULL, valuevar=NULL,
 Simple function like addTiles()
 }
 \examples{
-dat = data.frame(name = regionNames("city"),
-                 value = runif(384))
-geojsonMap(dat,"city")
+dat = data.frame(name = regionNames("china"),
+                 value = runif(34))
+geojsonMap(dat,"china")
 
 dat$value2 = cut(dat$value, c(0, 0.25, 0.5, 1))
-geojsonMap(dat,"city",
+geojsonMap(dat,"china",
   namevar = ~name,
   valuevar = ~value2,
   palette="Reds",
   colorMethod="factor")
 
-geojsonMap(dat,"city",
+geojsonMap(dat,"china",
   namevar = ~name,
   valuevar = ~value2,
   palette = topo.colors(3),
