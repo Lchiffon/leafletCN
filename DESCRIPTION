@@ -2,14 +2,14 @@ Package: leafletCN
 Type: Package
 Title: An R Gallery for China and Other Geojson Choropleth Map in
         Leaflet
-Version: 0.2
+Version: 0.2.1
 Date: 2016-12-24
 Author: Dawei Lang
 Maintainer: Dawei Lang <chiffonlang@icloud.com>
 Description: An R gallery for China and other geojson choropleth map in leaflet. Contains the geojson data for provinces, cities in China.
 License: GPL-2
 LazyData: TRUE
-Imports: htmltools, magrittr, sp, jsonlite, leaflet
-RoxygenNote: 5.0.1
+Imports: htmltools, magrittr, sp, jsonlite, leaflet, rgeos
+RoxygenNote: 6.0.1
 NeedsCompilation: no
 Packaged: 2017-01-01 14:10:21 UTC; chiffon

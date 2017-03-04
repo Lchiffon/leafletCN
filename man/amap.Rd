@@ -22,4 +22,3 @@ if(require(leaflet)){
 }
 
 }
-
