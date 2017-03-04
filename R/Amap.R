@@ -16,7 +16,7 @@
 ##'
 ##' @export
 amap = function(map,
-                attribution = '&copy; <a href="http://amap.com">amp.com</a >',
+                attribution = '&copy; <a href="http://amap.com">amap.com</a >',
                 ...){
   leaflet::addTiles(map,
            'http://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}',
