@@ -24,7 +24,7 @@ addTitle = function(object,
                     color = "black",
                     fontSize = "20px",
                     fontFamily = "Sans",
-                    leftPosition = 45,
+                    leftPosition = 50,
                     topPosition = 2){
 
   htmlwidgets::onRender(object, paste0("
@@ -35,7 +35,8 @@ addTitle = function(object,
                                        h1.style.color = '", color ,"';
                                        h1.style.fontSize = '",fontSize,"';
                                        h1.style.fontFamily='",fontFamily,"';
-                                       h1.style.position = 'relative';
+                                       h1.style.position = 'fixed';
+                                       h1.style['-webkit-transform']='translateX(-50%)';
                                        h1.style.left='",leftPosition ,"%';
                                        h1.style.top='",topPosition,"%';
                                        document.body.appendChild(h1);
