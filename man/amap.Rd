@@ -4,7 +4,7 @@
 \alias{amap}
 \title{Load amap to leaflet}
 \usage{
-amap(map,attribution = '&copy; <a href="http://amap.com">amp.com</a >',...)
+amap(map,attribution = '&copy; <a href="http://amap.com">amap.com</a >',...)
 }
 \arguments{
 \item{map}{a leaflet object}
@@ -22,3 +22,4 @@ if(require(leaflet)){
 }
 
 }
+

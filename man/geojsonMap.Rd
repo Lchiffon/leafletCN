@@ -61,3 +61,4 @@ geojsonMap(dat,"china",
   palette = topo.colors(3),
   colorMethod="factor")
 }
+

@@ -5,7 +5,7 @@
 \title{Add title to the leaflet}
 \usage{
 addTitle(object, text, color = "black", fontSize = "20px",
- fontFamily = "Sans", leftPosition = 45, topPosition = 2)
+ fontFamily = "Sans", leftPosition = 50, topPosition = 2)
 }
 \arguments{
 \item{object}{an leaflet object}
@@ -20,7 +20,7 @@ addTitle(object, text, color = "black", fontSize = "20px",
 
 \item{leftPosition}{the percent of the title postition to left, default: 50}
 
-\item{leftPosition}{the percent of the title postition to top, default:2}
+\item{topPosition}{the percent of the title postition to top, default:2}
 }
 \description{
 Function for creating a h1 title to the leaflet

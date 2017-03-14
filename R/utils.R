@@ -2,7 +2,7 @@
 #   library(leaflet)
 #   library(sp)
 # }
-globalVariables(c("mapNames", ".triList"))
+globalVariables(c("leafletcn.map.names", ".triList"))
 
 ## Encoding solution
 encodingSolution = function(str){
@@ -12,7 +12,7 @@ encodingSolution = function(str){
 ## read function
 readGeoLocal = function(city){
   query = toLabel(city)
-  if(!any(mapNames$label==query)){
+  if(!any(leafletcn.map.names$label==query)){
     stop(paste0("\n",
                 city,
                 ": this mapType cannot found!\n",
@@ -21,7 +21,7 @@ readGeoLocal = function(city){
                 "Encoding convert: ?iconv"))
   }
   file = paste0("geojson/",
-                mapNames$files[mapNames$label==query]
+                leafletcn.map.names$files[leafletcn.map.names$label==query]
   )
   filePath = system.file(file,package = "leafletCN")
 

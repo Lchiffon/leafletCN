@@ -4,7 +4,7 @@
 ##'
 ##' @usage
 ##' addTitle(object, text, color = "black", fontSize = "20px",
-##'  fontFamily = "Sans", leftPosition = 45, topPosition = 2)
+##'  fontFamily = "Sans", leftPosition = 50, topPosition = 2)
 ##'
 ##' @param object an leaflet object
 ##' @param text content of the title
@@ -12,7 +12,7 @@
 ##' @param fontSize font size for the title default: '20px'
 ##' @param fontFamily font family for the title, default: 'Sans'
 ##' @param leftPosition the percent of the title postition to left, default: 50
-##' @param leftPosition the percent of the title postition to top, default:2
+##' @param topPosition the percent of the title postition to top, default:2
 ##'
 ##'
 ##' @examples

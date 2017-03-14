@@ -14,7 +14,7 @@
 regionNames = function(mapName=NULL){
   # city = 'china'
   if(is.null(mapName)){
-    print(mapNames$name)
+    print(leafletcn.map.names$name)
     cat("\nThese are valid mapName~\n")
     return("NULL")
   }

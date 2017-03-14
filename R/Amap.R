@@ -3,7 +3,7 @@
 ##' @description Simple function like addTiles()
 ##'
 ##' @usage
-##' amap(map,attribution = '&copy; <a href="http://amap.com">amp.com</a >',...)
+##' amap(map,attribution = '&copy; <a href="http://amap.com">amap.com</a >',...)
 ##'
 ##' @param map   a leaflet object
 ##' @param attribution attribution of the map

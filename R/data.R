@@ -4,9 +4,9 @@
 #'
 #' @format A data set cities and file names
 #'
-"mapNames"
+"leafletcn.map.names"
 
 #' @format List for merge
-#' @rdname mapNames
+#' @rdname leafletcn.map.names
 ".triList"
 

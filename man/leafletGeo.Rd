@@ -43,3 +43,4 @@ if(require(leaflet)){
                  opacity = 1)
 }
 }
+
