@@ -15,4 +15,3 @@ show regions in the map
 \examples{
 regionNames('city')
 }
-

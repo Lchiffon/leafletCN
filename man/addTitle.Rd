@@ -29,4 +29,3 @@ Function for creating a h1 title to the leaflet
 demomap('china') \%>\% addTitle("Hello World")
 
 }
-

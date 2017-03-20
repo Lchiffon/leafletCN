@@ -10,8 +10,8 @@
 ##'
 ##' @param dat a data.frame contain regions and values
 ##' @param mapName mapName for loading, eg. 'china', 'city', ...
-##' @param namevar show which feature is chosen for name variable
-##' @param valuevar show which featue is chosen for value variable
+##' @param namevar a formula show which feature is chosen for name variable
+##' @param valuevar a formula show which feature is chosen for value variable
 ##' @param palette The colors or color function that values will be mapped to, see RColorBrewer::display.brewer.all()
 ##' @param colorMethod set one of the coloe mapping in c("numeric", "bin", "quantile", "Factor")
 ##' @param na.color The color to return for NA values. Note that na.color=NA is valid.

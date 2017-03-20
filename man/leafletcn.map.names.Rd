@@ -2,17 +2,10 @@
 % Please edit documentation in R/data.R
 \docType{data}
 \name{leafletcn.map.names}
-\alias{.triList}
 \alias{leafletcn.map.names}
+\alias{.triList}
 \title{Demo dataset and other function}
 \format{A data set cities and file names}
-\usage{
-leafletcn.map.names
-
-.triList
-}
 \description{
 A data file of words and frequency from tm package
 }
-\keyword{datasets}
-
