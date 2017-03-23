@@ -1,0 +1,17 @@
+language: r
+
+
+r_github_packages:
+    - jimhester/covr
+
+env:
+    global:
+        - _R_CHECK_TIMINGS_=0
+
+
+after_success:
+    - Rscript -e 'library(covr);coveralls()'
+
+warnings_are_errors: false
+sudo: required
+

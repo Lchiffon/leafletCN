@@ -14,9 +14,9 @@ geojsonMap(dat, mapName, namevar=NULL, valuevar=NULL,
 
 \item{mapName}{mapName for loading, eg. 'china', 'city', ...}
 
-\item{namevar}{show which feature is chosen for name variable}
+\item{namevar}{a formula show which feature is chosen for name variable}
 
-\item{valuevar}{show which featue is chosen for value variable}
+\item{valuevar}{a formula show which feature is chosen for value variable}
 
 \item{palette}{The colors or color function that values will be mapped to, see RColorBrewer::display.brewer.all()}
 
@@ -61,4 +61,3 @@ geojsonMap(dat,"china",
   palette = topo.colors(3),
   colorMethod="factor")
 }
-

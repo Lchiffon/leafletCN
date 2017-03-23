@@ -19,4 +19,3 @@ if(require(sp)){
   plot(map)
 }
 }
-
