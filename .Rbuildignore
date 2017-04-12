@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 README.md
 examples
+^appveyor\.yml$
