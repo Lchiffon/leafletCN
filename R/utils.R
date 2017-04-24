@@ -40,7 +40,18 @@ toLabel = function(city){
   labels = sapply(city, function(x){
     if(tolower(substr(x,1,1)) %in% letters){
       return(tolower(x))
-    } else if(grepl(.triList[[1]], x)|
+    }else if(x == .triList[[5]] | grepl(paste0(.triList[[5]],.triList[[7]][1]), x)){
+      warning("Using Jilin Province instead of Jilin City!")
+      return(.triList[[5]])
+    } else if(grepl(.triList[[5]], x) & !grepl(paste0(.triList[[5]],.triList[[7]][1]), x)){
+      return(paste0(.triList[[5]],.triList[[7]][2]))
+    }
+    else if(x == .triList[[6]] | grepl(paste0(.triList[[6]],.triList[[7]][1]), x)){
+      warning("Using Hainan Province instead of Hainan City!")
+      return(.triList[[6]])
+    }else if(grepl(.triList[[6]], x) & !grepl(paste0(.triList[[6]],.triList[[7]][1]), x)){
+      return(paste0(.triList[[6]],.triList[[7]][2]))
+    }else if(grepl(.triList[[1]], x)|
        grepl(.triList[[2]], x)|
        grepl(.triList[[3]], x)|
        grepl(.triList[[4]], x)
