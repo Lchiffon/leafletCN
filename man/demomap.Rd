@@ -8,6 +8,7 @@ demomap (mapName)
 }
 \arguments{
 \item{mapName}{mapName for loading, eg. 'china', 'city', ...}
+\item{opacity}{opacity for polygons}
 }
 \description{
 This function create a leaflet map from a name of the mapType like china, city

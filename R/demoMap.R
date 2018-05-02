@@ -11,7 +11,7 @@
 ##' @examples
 ##' demomap("china")
 ##' @export
-demomap = function(mapName){
+demomap = function(mapName, opacity=0.2){
   # if(.Platform$OS.type == "windows"){
   #   locate = Sys.getlocale("LC_CTYPE")
   #   Sys.setlocale("LC_CTYPE","eng")
@@ -30,7 +30,7 @@ demomap = function(mapName){
   output = map %>% leaflet::addTiles() %>%
     leaflet::addPolygons(stroke = T,
                 smoothFactor = 0.2,
-                fillOpacity = 0.2,
+                fillOpacity = opacity,
                 # fillColor = ~color,
                 weight = 1,
                 popup = ~htmltools::htmlEscape(popup))
