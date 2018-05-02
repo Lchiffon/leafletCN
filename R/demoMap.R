@@ -31,7 +31,9 @@ demomap = function(mapName, opacity=0.2){
     leaflet::addPolygons(stroke = T,
                 smoothFactor = 0.2,
                 fillOpacity = opacity,
-                # fillColor = ~color,
+                fillColor = 'grey',
+                color = 'white',
+                opacity = 1,
                 weight = 1,
                 popup = ~htmltools::htmlEscape(popup))
 #
