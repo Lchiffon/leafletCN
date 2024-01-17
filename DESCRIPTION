@@ -16,8 +16,7 @@ Imports:
     magrittr,
     sp,
     jsonlite,
-    leaflet,
-    rgeos
+    leaflet
 RoxygenNote: 6.0.1
 NeedsCompilation: no
 Packaged: 2017-01-01 14:10:21 UTC; chiffon
